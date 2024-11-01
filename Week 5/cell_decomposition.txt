@@ -1,0 +1,17 @@
+def cell_decomposition(obstacles, start, goal):
+    # Menghitung cell decomposition berdasarkan rintangan
+    cells = create_cells(obstacles)  # Membuat cell dari rintangan
+    path = find_path_through_cells(cells, start, goal)  # Mencari jalur melalui cell
+    return path
+
+def create_cells(obstacles):
+    # Membuat cell berdasarkan posisi rintangan
+    return [(0, 0, 1, 1), (1, 1, 2, 2)]  # Contoh sel, bisa dikembangkan lebih lanjut
+
+def find_path_through_cells(cells, start, goal):
+    # Algoritma untuk menemukan jalur melalui cell
+    return [(start), (goal)]  # Kembalikan jalur dari start ke goal
+
+obstacles = [(1, 1, 2, 2)]  # Mendefinisikan rintangan
+path = cell_decomposition(obstacles, (0, 0), (3, 3))  # Mencari jalur dari (0, 0) ke (3, 3)
+print("Path:", path)  # Menampilkan jalur yang ditemukan
