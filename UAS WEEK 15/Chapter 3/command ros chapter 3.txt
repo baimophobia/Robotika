@@ -1,0 +1,8 @@
+cd ~/Downloads/repository
+ls
+mkdir src
+mv Chapter3  src/
+catkin_make
+source devel/setup.bash
+roslaunch mastering_ros_robot_description_pkg view_demo.launch
+roslaunch mastering_ros_robot_description_pkg view_arm.launch

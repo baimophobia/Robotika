@@ -1,0 +1,9 @@
+cd ~/Downloads/repository
+ls
+mkdir src
+mv Chapter4  src/
+catkin_make
+source devel/setup.bash
+
+roslaunch seven_dof_arm_gazebo seven_dof_arm_gazebo_control.launch 
+rostopic pub /seven_dof_arm/joint4_position_controller/command std_msgs/Float64 "data: 1.0"
